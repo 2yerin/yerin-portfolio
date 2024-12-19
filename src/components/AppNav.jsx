@@ -1,43 +1,31 @@
-import { memo, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { navigationItems } from '@/router';
+import { memo } from 'react';
+// import { NavLink } from 'react-router-dom';
+// import { navigationItems } from '@/router';
+// import AboutMe from '@/pages/AboutMe/AboutMe';
+// import Skills from '@/pages/Skills/Skills';
+// import Projects from '@/pages/Projects/Projects';
 
 function AppNav() {
-  const [items] = useState(navigationItems);
+  const navData = ['aboutMe', 'skills', 'projects', 'education'];
+
+  const handleScroll = (section) => {
+    document.getElementById(section).scrollIntoView();
+  };
 
   return (
-    <footer className="fixed w-full bottom-0">
-      <nav>
-        <h2 className="sr-only">페이지 탐색 네비게이션</h2>
-        {items.length > 0 && (
-          <ul className="py-s10 w-4/5 max-w-6xl mx-auto flex justify-around gap-8">
-            {items.map((item, index) => (
-              <li key={item.path ?? index}>
-                <NavLink
-                  to={item.path}
-                  end={item.path?.endsWith('/') ?? false}
-                  className={({ isActive }) => {
-                    return isActive ? ' text-orange-400 ' : 'text-black';
-                  }}
-                >
-                  <p className="text-[16px]">{item.text}</p>
-                  {/* <div className="flex flex-col items-center justify-center gap-1">
-                    <svg
-                      className={`w-6 h-6 `}
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                    >
-                      <use href={`../assets/sprite.svg#${item.svgId}`} />
-                    </svg>
-                    <p className="text-center text-f12">{item.text}</p>
-                  </div> */}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        )}
-      </nav>
-    </footer>
+    <nav className="flex justify-between fixed w-full">
+      <h2 className="sr-only">페이지 탐색 네비게이션</h2>
+
+      <button onClick={() => handleScroll('main')}>yerin</button>
+
+      <ul className="flex gap-2">
+        {navData.map((data, index) => (
+          <li key={index}>
+            <button onClick={() => handleScroll(data)}>{data}</button>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 }
 

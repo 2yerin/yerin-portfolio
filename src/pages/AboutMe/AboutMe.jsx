@@ -3,7 +3,7 @@ import { memo } from 'react';
 function AboutMe() {
   return (
     <>
-      <div className="w-screen h-screen">
+      <div id="aboutMe" className="w-screen h-screen">
         <h1>#about me</h1>
 
         <div>

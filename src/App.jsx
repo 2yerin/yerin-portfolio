@@ -7,10 +7,11 @@ import Skills from './pages/Skills/Skills';
 import End from './pages/End/End';
 import Projects from './pages/Projects/Projects';
 import Education from './pages/Education/Education';
-
+import { AppNav } from './components';
 function App() {
   return (
     <HelmetProvider>
+      <AppNav />
       <Main />
       <AboutMe />
       <Skills />

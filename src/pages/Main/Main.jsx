@@ -10,6 +10,7 @@ function Main() {
       <meta property="og:type" content="website" />
       <meta property="og:description" content="프로젝트 템플릿" />
       <div
+        id="main"
         className="w-screen h-screen"
         // className="w-screen h-screen bg-cover bg-center relative"
         // style={{ backgroundImage: "url('/assets/appIntroBg.png')" }}
