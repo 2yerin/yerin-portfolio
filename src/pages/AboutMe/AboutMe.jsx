@@ -3,27 +3,26 @@ import { memo } from 'react';
 function AboutMe() {
   return (
     <>
-      <div id="aboutMe" className="w-screen h-screen">
-        <h1>#about me</h1>
+      <div
+        id="aboutMe"
+        className="w-full h-screen text-center content-center bg-yellow-200 px-5 py-20"
+      >
+        <div className="bg-pink-300 w-full h-full flex gap-12">
+          <div className="flex flex-col justify-between items-start">
+            <h1 className="text-[30px]">about me</h1>
+            <i>github</i>
+          </div>
 
-        <div>
-          <p>이예린</p>
-          <div>
-            <i>메일</i>
-            <span>yerin@naver.com</span>
-          </div>
-          <div>
-            <i>학교</i>
-            <span>군산대학교</span>
-          </div>
-        </div>
-
-        <div>
-          <h2>##active</h2>
-          <div>
-            <i>깃허브</i>
-            <i>블로그</i>
-          </div>
+          <ul className="flex flex-col gap-4">
+            <li className="flex flex-col items-start">
+              <p className="text-[18px]">이름</p>
+              <p className="text-[16px]">이예린</p>
+            </li>
+            <li className="flex flex-col items-start">
+              <p className="text-[18px]">메일</p>
+              <p className="text-[16px]">erin@naver.com</p>
+            </li>
+          </ul>
         </div>
       </div>
     </>
